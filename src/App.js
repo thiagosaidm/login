@@ -1,5 +1,6 @@
 import logo from './assets/logo.png'
 
+import './styles.css'
 
 function App() {
   return (
@@ -14,12 +15,12 @@ function App() {
                 <img src={logo} alt="Logo"/>
               </span>
             
-            <div className='wrap-input'>
-                <input type="email"/>
+            <div className='wrap_input'>
+                <input className='input' type="email"/>
                 <span className="focus_input" data-placeholder="E-mail" ></span>
             </div>
-            <div className='wrap-input'>
-                <input type="password" />
+            <div className='wrap_input'>
+                <input className='input' type="password" />
                 <span className="focus_input" data-placeholder="Senha" ></span>
             </div>
             
