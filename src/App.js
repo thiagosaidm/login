@@ -13,7 +13,7 @@ function App() {
               <span className="form_title">
                 <img src={logo} alt="Logo"/>
               </span>
-
+            
             <div className='wrap-input'>
                 <input type="email"/>
                 <span className="focus_input" data-placeholder="E-mail" ></span>
@@ -23,6 +23,24 @@ function App() {
                 <span className="focus_input" data-placeholder="Senha" ></span>
             </div>
             
+          <div className='login_form_btn'>
+              <button className='login_btn'>Login</button>
+
+          </div>
+
+          <div className='forgot'>
+            <span className='forgt_msg'>
+               Esqueceu sua Senha?
+            </span>
+            <a className='forgot_link' href='#'>Redefinir Senha</a>
+          </div>
+
+          <div className='new_menber'>
+            <span className='new_menber_content'>
+               Crie sua Conta
+            </span>
+            <a className='new_menber_link' href='#'>Crie sua Conta</a>
+          </div>
 
 
 
