@@ -99,7 +99,7 @@
     display: block;
     width: 100%;
     position: absolute;
-    top:1px;
+    top: 0;
     left: 0;
     padding-left: .1em;
 
@@ -114,10 +114,17 @@
 }
 
 .input:focus + .focus_input::after{
-    top: -1em;
+    top: -30px;
 }
 
 .input:focus + .focus_input::before{
+    width: 100%;
+}
+
+.has-val + .focus_input::after{
+    top: -30px;
+}
+.has-val + .focus_input::before{
     width: 100%;
 }
 
@@ -144,4 +151,29 @@
     background: -o-linear-gradient(to left, #64E7C8,#0D8090 );
     background: -moz-linear-gradient(to left, #64E7C8,#0D8090 );
     background: linear-gradient(to left, #64E7C8,#0D8090 );
+}
+
+.login_btn:hover{
+    cursor: pointer;
+}
+
+.form_footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin: .2em 0;
+}
+
+.forgot_link{
+    text-decoration: none;
+    color: #0D8090;
+    padding-left: .5em;
+}
+
+.new_menber_link{
+    text-decoration: none;
+    color: #0D8090;
+    padding-left: .5em;
+
 }

@@ -1,8 +1,11 @@
+import { useState } from 'react';
 import logo from './assets/logo.png'
 
 import './styles.css'
 
 function App() {
+  const [email, setemail] = useState("")
+  const [password, setPassword] = useState("")
   return (
     <div className="container">
       <div className="container_login">
@@ -16,11 +19,18 @@ function App() {
               </span>
             
             <div className='wrap_input'>
-                <input className='input' type="email"/>
+                <input className={email !== "" ? 'has-val input' : 'input'}
+                type="email"
+                value={email} 
+                onChange={e => setemail(e.target.value)} />
                 <span className="focus_input" data-placeholder="E-mail" ></span>
             </div>
             <div className='wrap_input'>
-                <input className='input' type="password" />
+                <input className={password !== "" ? 'has-val input' : 'input'}
+                type="password" 
+                value={password}
+                onChange={e =>setPassword(e.target.value)}
+                 />
                 <span className="focus_input" data-placeholder="Senha" ></span>
             </div>
             
@@ -29,14 +39,14 @@ function App() {
 
           </div>
 
-          <div className='forgot'>
+          <div className='form_footer'>
             <span className='forgt_msg'>
                Esqueceu sua Senha?
             </span>
             <a className='forgot_link' href='#'>Redefinir Senha</a>
           </div>
 
-          <div className='new_menber'>
+          <div className='form_footer'>
             <span className='new_menber_content'>
                Crie sua Conta
             </span>
